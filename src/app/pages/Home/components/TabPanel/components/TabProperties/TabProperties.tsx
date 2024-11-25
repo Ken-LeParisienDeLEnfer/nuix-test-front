@@ -1,10 +1,10 @@
-import { Property } from "models/Property";
+import PropertyDisplay from "./components/PropertyDisplay/PropertyDisplay";
 
-
-const TabProperties = ({properties} : {properties: Property}) => {
-    // FIXME: properties is a dynamic object
+const TabProperties = ({properties} : {properties: Record<string, string>}) => {
     return (
-        <span>properties</span>
+        <section>
+            {Object.keys(properties).map((key: string) => <PropertyDisplay key={key} legend={key} value={properties[key]}/>)}
+        </section>
     )
 }
 
