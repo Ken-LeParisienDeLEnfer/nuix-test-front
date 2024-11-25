@@ -1,0 +1,11 @@
+.header {
+    display: flex;
+    color: #0056e3;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.header-img {
+    height: 40px;
+    margin-top: 10px;
+}

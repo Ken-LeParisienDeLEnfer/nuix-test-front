@@ -1,16 +1,22 @@
 import React from 'react';
 import './App.css';
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
-import { ListItems } from './pages/ListItems/ListItems';
+import { Home } from './pages/Home/Home';
+import { Layout } from 'antd';
+import { AppHeader } from './components/Header/Header';
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<ListItems />} />
-        <Route path="*" element={<Navigate to="/" replace/>} />
-      </Routes>
-    </BrowserRouter>
+    <Layout>
+      <AppHeader/>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="*" element={<Navigate to="/" replace/>} />
+        </Routes>
+      </BrowserRouter>
+    </Layout>
+    
   );
 }
 
