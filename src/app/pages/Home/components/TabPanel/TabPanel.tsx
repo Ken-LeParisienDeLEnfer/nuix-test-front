@@ -4,8 +4,6 @@ import { selectedItem } from 'store/slices/itemsSlice';
 import TabProperties from './components/TabProperties/TabProperties';
 import TabImage from './components/TabImage/TabImage';
 
-
-
 export default function TabPanel() {
     const item = useSelector(selectedItem);
     if (!item) return <p>Please select an item from the table.</p>;
@@ -19,7 +17,7 @@ export default function TabPanel() {
         {
           key: '2',
           label: 'Image',
-          children: <TabImage itemGuid={item.guid}/>,
+          children: <TabImage itemGuid={item.guid} itemName={item.name}/>,
         },
       ];
 
