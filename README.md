@@ -1,10 +1,34 @@
-# Getting Started with Create React App
+# Nuix Test App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Project Description
+
+You’ve been tasked with building React components to list and display details of items, and you have received this rough mockup and access to the backend application that exposes the REST API.
+
+* Use ReactJS, feel free to use Material UI as a component library (or create them from scratch).
+* You have total freedom to style the components. Be creative!
+* Prefer TypeScript, but send JavaScript if you feel more comfortable.
+* Extra points if you use redux (rather than React’s reducer) for the model.
+
+## Project Key Dependencies
+
+* React V18.3.1
+* Redux V9.1.2
+* Ant Design V5.22.2
+* Styled-components V6.1.13
 
 ## Available Scripts
 
 In the project directory, you can run:
+
+### `npm run dev`
+
+Runs the app in the development mode using .env.development file for local API
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
 
 ### `npm start`
 
@@ -13,11 +37,6 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
 ### `npm run build`
 
