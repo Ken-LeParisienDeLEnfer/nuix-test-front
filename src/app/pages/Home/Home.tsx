@@ -1,21 +1,21 @@
-import { Layout } from "antd";
+import { Col } from "antd";
 import TableItems from "./components/TableItems/TableItems";
 import TabPanel from "./components/TabPanel/TabPanel";
+import { StyledRow } from "app/components/styled/StyledRow";
 
-const { Sider, Content } = Layout;
 
 
 export function Home() {
 
     return (
-        <Layout style={{ height: '100vh' }}>
-            <Sider width="50%" style={{ background: '#fff' }}>
+        <StyledRow>
+            <Col xs={24} sm={24} md={16} lg={18} xl={12}>
                 <TableItems />
-            </Sider>
-            <Content style={{ padding: '20px', background: '#fff' }}>
+            </Col>
+            <Col xs={24} sm={24} md={8} lg={6} xl={12}>
                 <TabPanel />
-            </Content>
-        </Layout>
+            </Col>
+        </StyledRow>
     )
   
 

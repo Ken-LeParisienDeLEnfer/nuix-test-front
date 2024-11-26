@@ -1,4 +1,4 @@
-import { Spin } from 'antd';
+import { Alert, Spin } from 'antd';
 import { useImageGetByIdQuery } from 'services/imageApi';
 
 const TabImage = ({ itemGuid, itemName }: { itemGuid: string; itemName: string }) => {
@@ -9,7 +9,7 @@ const TabImage = ({ itemGuid, itemName }: { itemGuid: string; itemName: string }
   return (
     <section style={{ textAlign: 'center', marginTop: '20px' }}>
       {(isLoading || isFetching) && <Spin size="large" />}
-      {isError && <span style={{ color: 'red' }}>An error occurred loading the image</span>}
+      {isError && <Alert message="Error Text" type="error" />}
       {image && !isFetching && <img src={image} alt={`Image from ${itemName}`} style={{ maxWidth: '100%' }} />}
     </section>
   );
