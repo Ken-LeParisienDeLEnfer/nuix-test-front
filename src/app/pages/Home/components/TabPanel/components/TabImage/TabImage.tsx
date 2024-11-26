@@ -10,7 +10,7 @@ const TabImage = ({ itemGuid, itemName }: { itemGuid: string; itemName: string }
     <section style={{ textAlign: 'center', marginTop: '20px' }}>
       {(isLoading || isFetching) && <Spin size="large" />}
       {isError && <Alert message="Error Text" type="error" />}
-      {image && !isFetching && <img src={image} alt={`Image from ${itemName}`} style={{ maxWidth: '100%' }} />}
+      {image && !isFetching && <img src={image} alt={`Illustration of item ${itemName}`} style={{ maxWidth: '100%' }} />}
     </section>
   );
 };
